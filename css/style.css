@@ -7,5 +7,168 @@ html ,body{
 }
 body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    height: 100%;
+    background:#f5f5f5;
 
 }
+.container{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  padding-right:6rem;
+}
+
+.battery{
+  position:relative;
+  background-color:white;
+  width:20vw;
+  margin-top:5vh;
+  height:15vh;
+  border:10px solid red;
+  border-radius:10px;
+  overflow:hidden;
+  
+}
+.range{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:repeating-linear-gradient(70deg,yellow,yellow 5%,black 5%,black 10% );
+  animation:fast linear  2s infinite; 
+}
+
+.lord-of-ring{
+    margin-top:5vh;
+    margin-left:3rem;
+}
+
+.ring{
+  position:relative;
+  margin:5vh auto;
+  width:100px;
+  height:50px;
+  background:white;
+  border:10px solid orange;
+/*   border-top-color:red; */
+  animation:ring 2s linear infinite,
+            pulse 1s ease-in-out infinite;
+  border-radius:50%;
+  box-shadow:0px 0px 2px black;
+}
+
+.audi-logo{
+    margin:5vh 0 0 3rem;
+  }
+  
+  @keyframes fast{
+    0%{
+      width:0%;
+    }
+    100%{
+      width:100%;
+    }
+  }
+  
+  
+  h1{
+    text-align:center;
+    margin:0;
+    color:red;
+  }
+  .audi{
+    position:relative;
+    margin:5vh auto;
+    width:100px;
+    height:100px;
+    background:white;
+    border:10px solid orange;
+  /*   border-top-color:red; */
+    animation:spin 2s linear infinite,
+              pulse 1s ease-in-out  infinite;
+              border-radius:50%;
+              box-shadow:0px 0px 2px black;
+              
+            }
+            .spin-left{
+                position:absolute;
+                margin:5vh auto;
+                width:100px;
+                height:100px;
+    background:transperant;
+    border:10px solid blue;
+    border-radius:50%;
+    box-shadow:0px 0px 2px rgba(0,0,0,1);
+    left:-45px;
+    bottom:-120px; 
+    
+  /*    animation:spin-to 2s linear infinite; */
+    
+}
+.spin-right{
+    position:absolute;
+    margin:5vh auto;
+    width:100px;
+    height:100px;
+    background:transperant;
+    border:10px solid green;
+    border-radius:50%;
+    box-shadow:0px 0px 2px rgba(0,0,0,1);
+    right:-40px;
+    bottom:-120px; 
+}
+
+.walking img{
+    animation:walk 4s infinite steps(100);
+}
+
+@keyframes spin{
+    0%{
+        transform:rotate(0deg);
+    }
+    50%{
+        border:10px solid red;
+        
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+/* @keyframes spin-to{
+    0%{
+        transform:rotate(0deg);
+        
+    }
+    100%{
+        transform:rotate(360deg)
+    }
+} */
+@keyframes pulse{
+    0%,100%{
+      opacity:.8;
+    }
+    50%{
+      opacity:.4;
+    }
+   
+  }
+  @keyframes walk{
+      0%,100%{
+          margin-left:0;
+          /*     transform:rotateY(180deg); */
+          
+    }
+    50%{
+      margin-left:30rem;
+      transform:rotateY(180deg);
+    }
+  }
+              @keyframes ring{
+                  0%{
+              transform:rotate(0deg);
+              }
+              100%{
+              transform:rotate(360deg);
+              }
+              }
