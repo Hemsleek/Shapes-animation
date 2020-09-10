@@ -120,7 +120,7 @@ body{
 }
 
 .walking img{
-    animation:walk 4s infinite steps(100);
+    animation:walk 8s infinite steps(100);
 }
 
 @keyframes spin{
@@ -160,7 +160,7 @@ body{
           
     }
     50%{
-      margin-left:30rem;
+      margin-left:80rem;
       transform:rotateY(180deg);
     }
   }
@@ -172,3 +172,108 @@ body{
               transform:rotate(360deg);
               }
               }
+
+              .nav{
+                display:flex;
+                height:64px;
+                background:aqua;
+                justify-content:space-between;
+                align-items:center;
+                padding:0 1em;
+                margin-top:2rem;
+              }
+              .spacer{
+                flex-grow:.45;
+              }
+              .triangle{
+                width:0;
+                height:0;
+                border-top:100px solid transparent;
+                border-left:200px solid orange;
+                border-bottom:100px solid transparent ;
+                
+              }
+              .container{
+                display:flex;
+                margin-top:20px;
+                align-items:center;
+                
+              }
+              .circle{
+                width:20%;
+                
+              }
+              .circle-shape{
+                float:left;
+                width:100px;
+                height:100px;
+                background-color:blue;
+                shape-outside:circle(50% at 30%);
+                clip-path:circle(50% at 0%);
+                margin:20px;
+              /*   transform:rotate(90deg) */
+                
+              }
+              .ellipse{
+                margin-left:100px;
+                width:20%;
+              }
+                .ellipse-shape{
+                  float:left;
+                  width:100px;
+                  height:100px;
+                  background:red;
+                  shape-outside:ellipse(20% 50%);
+                  clip-path:ellipse(20% 50%);
+                  margin:20px;
+                  
+                }
+              .polygon{
+                margin-left:100px;
+                width:20%;
+              }
+              .polygon-shape{
+                float:left;
+                width:100px;
+                height:100px;
+                margin:20px;
+                background:green;
+                clip-path:polygon(
+                  25% 0,
+                  50% 50%,
+                  75% 0,
+                  75% 100%,
+                  65% 100%,
+                  65% 60%,
+                  50% 80%,
+                  35% 60%,
+                  35% 100%,
+                  25% 100%
+                );
+              
+              shape-outside:polygon(
+                    25% 0,
+                  50% 50%,
+                  75% 0,
+                  75% 100%,
+                  65% 100%,
+                  65% 60%,
+                  50% 80%,
+                  35% 60%,
+                  35% 100%,
+                  25% 100%
+                )
+              }
+              .image{
+                width:20%;
+                margin-left:100px;
+                
+              }
+              .image img{
+                float:left;
+                border-radius:50%;
+                width:10em;
+                height:10em;
+                shape-outside:url(https://images.unsplash.com/photo-1561991524-9eaa9f7d910b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80);
+              }
+              
