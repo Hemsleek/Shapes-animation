@@ -10,6 +10,7 @@ body{
     width: 100%;
     height: 100%;
     background:#f5f5f5;
+    overflow-x: hidden;
 
 }
 .container{
@@ -160,7 +161,7 @@ body{
           
     }
     50%{
-      margin-left:80rem;
+      margin-left:30rem;
       transform:rotateY(180deg);
     }
   }
@@ -197,6 +198,7 @@ body{
                 display:flex;
                 margin-top:20px;
                 align-items:center;
+                
                 
               }
               .circle{
@@ -276,4 +278,72 @@ body{
                 height:10em;
                 shape-outside:url(https://images.unsplash.com/photo-1561991524-9eaa9f7d910b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80);
               }
-              
+.glass-container{
+  /* margin-bottom: 10px 0 20px; */
+  background:url(https://images.unsplash.com/photo-1480497490787-505ec076689f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60) no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed; */
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+.drop-filter , .pseudo{
+  background:url(https://images.unsplash.com/photo-1497250681960-ef046c08a56e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60) no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed; */
+  height: 70%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  box-shadow:0 0 1rem 0 rgba(0, 0, 0, .8  );
+
+  
+}
+.glass-dropFilter{
+    width: 30rem;
+    height: 20rem;
+    border-radius: 5px;
+    box-shadow:0 0 1rem 0 rgba(0, 0, 0, .2  );
+    background-color: rgba(255,255 , 255, .15);
+    backdrop-filter: blur(5px);
+    text-align: center;
+    padding: 1rem;
+
+}
+.pseudo{
+  background-attachment: fixed;
+
+}
+ .pseudo .glass-pseudo{
+  padding: 1rem;
+   text-align:center;
+   position:relative;
+   background: inherit;
+  width: 30rem;
+  height: 20rem;
+  border-radius: 5px;
+  box-shadow: 0 0 1rem -10px rgba(0,0,0,1);
+  overflow: hidden;
+  z-index: 2;
+  /* box-shadow:0 0 1rem 0 rgba(255, 255, 255, .2  ); */
+ }
+ .glass-pseudo:after{
+   content: "";
+   position:absolute;
+   top:0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   box-shadow:inset 0 0 2000px rgba(255, 255, 255, .5 );
+   background: inherit;
+   filter:blur(5px);
+    z-index: -1;
+    margin:-20px;
+ }
