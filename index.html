@@ -109,6 +109,24 @@
               <div class="inset-border">
   
               </div>
+
+              <div class="query-test">
+                <form id="search-form" action="#">
+                  <input type="text" required>
+                  <button type="submit">Submit</button>
+                </form>
+                <div class="screen">
+
+                </div>
+              </div>
+              <script defer>
+                  const formEl = document.getElementById("search-form");
+                  console.log(formEl)
+                  formEl.addEventListener('onSubnit' , e => {
+                    event.preventDefault();
+                    console.log("it worked")
+                  })
+              </script>
         
 </body>
 </html>

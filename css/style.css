@@ -353,5 +353,13 @@ body{
    height: 100px;
    border-radius: 50%;
    background-color: green;
-  border:inset 6px  blue;
+  border:solid 6px  blue;
+  border-top:solid 6px transparent;
+  
+ }
+
+ .query-test{
+   margin:0 auto 5vh;
+   width:max-content;
+   
  }
