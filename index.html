@@ -120,11 +120,22 @@
                 </div>
               </div>
               <script defer>
+
                   const formEl = document.getElementById("search-form");
-                  console.log(formEl)
-                  formEl.addEventListener('onSubnit' , e => {
+
+                  const result = new Promise((resolve , reject) =>{
+                      fetch('https://jsonplaceholder.typicode.com/posts/1').then(response => resolve(response.json())).catch(error => reject(error) )
+                      }).then((data) => data.title).catch(error => console.log({error}))
+                      console.log(result)
+                 
+
+                
+                  formEl.addEventListener('submit' , e => {
                     event.preventDefault();
-                    console.log("it worked")
+                    console.log(e)
+
+
+                    console.log("its working")
                   })
               </script>
         
