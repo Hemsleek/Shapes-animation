@@ -363,3 +363,21 @@ body{
    width:max-content;
    
  }
+ .anime {
+  width: 150px;
+  height: 150px;
+  background-color: #5ba4fc;
+  margin: 30vh auto;
+  border-radius: 50%;
+  animation: fade 2s ease-in-out infinite;
+  transform-origin:center center; 
+}
+@keyframes fade {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 0.5;
+  }
+}
