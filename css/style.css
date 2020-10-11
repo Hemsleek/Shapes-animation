@@ -381,3 +381,33 @@ body{
     opacity: 0.5;
   }
 }
+
+.test-shape{
+  display: flex;
+  margin:0 auto 3vh;
+  position: relative;
+  justify-content: flex-end;
+  height: 80vh;
+  width: 80vw;
+  background: url("https://images.unsplash.com/photo-1593642532744-d377ab507dc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.test2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  border-top: 80vh solid yellow;
+  border-left: 150px solid transparent;
+  opacity: 0.5;
+}
+.test-shape div {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  position: absolute;
+  width: 63%;
+  height: 100%;
+  padding: 0.6rem 0;
+}
