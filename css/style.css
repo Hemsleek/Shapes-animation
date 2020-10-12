@@ -358,7 +358,7 @@ body{
   
  }
 
- .query-test{
+ .copy-test{
    margin:0 auto 5vh;
    width:max-content;
    
@@ -410,4 +410,59 @@ body{
   width: 63%;
   height: 100%;
   padding: 0.6rem 0;
+}
+.love1 {
+  position: relative;
+  width: 0px;
+  height: 0px;
+  /*   background: red; */
+  margin: 5vh auto;
+  border-top: 81px solid red;
+  border-radius: 50% 50% 0 0;
+  border-right: 50px solid transparent;
+
+  border-left: 50px solid transparent;
+}
+
+.love1:after,
+.love1:before {
+  content: "";
+  width: 46.5px;
+  height: 46.5px;
+  border-radius: 50%;
+  top: -105px;
+  position: absolute;
+  background: red;
+  /*   transform:rotate(-45deg); */
+}
+.love1:after {
+  right: 0;
+  /*   transform:rotate(45deg); */
+  border-radius: ;
+}
+.love2 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 10vh auto;
+  /*   background:red; */
+}
+
+.love2:after,
+.love2:before {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 90px;
+  background: blue;
+  border-radius: 50px 50px 0 0;
+  top: 0;
+  left: 50px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+.love2:after {
+  left: 0px;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
 }

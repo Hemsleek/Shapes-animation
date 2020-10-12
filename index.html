@@ -110,11 +110,16 @@
   
               </div>
 
-              <div class="query-test">
+              <div class="copy-test">
                 <form id="search-form" action="#">
-                  <input type="text" required>
-                  <button type="submit">Submit</button>
+                  <input type="text" name="source" placeholder="Enter text and click the button" required>
+
+                  <button type="submit" >copy text</button> <br> <br>
+
+                  <input type="text" placeholder="paste text here">
+
                 </form>
+
                 <div class="screen">
 
                 </div>
@@ -129,6 +134,9 @@
                 </div>
               </div>
 
+              <div class="love1"></div>
+              <div class="love2"></div>
+
               <script defer>
 
                   const formEl = document.getElementById("search-form");
@@ -142,7 +150,8 @@
                 
                   formEl.addEventListener('submit' , e => {
                     event.preventDefault();
-                    console.log(e)
+                    let value = e.target.source.value
+                    
 
 
                     console.log("its working")
