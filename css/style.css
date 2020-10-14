@@ -438,7 +438,7 @@ body{
 .love1:after {
   right: 0;
   /*   transform:rotate(45deg); */
-  border-radius: ;
+  /* border-radius: ; */
 }
 .love2 {
   position: relative;
