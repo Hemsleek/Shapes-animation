@@ -25,6 +25,38 @@
       </div>
     </div>
   </div>
+
+  <div class="chart-container">
+    <h2>Rainfall Chart</h2>
+    <div class="chart">
+      <div class="y-axis">
+        <span>0</span>
+        <span>100</span>
+        <span>200</span>
+        <span>300</span>
+        <span>400</span>
+      </div>
+      <div class="main">
+        <div class="bars">
+  
+        </div>
+        <div class="x-axis">
+          <span>Ethan Coel, Joel Coel</span>
+          <span>Lee Unkrich</span>
+          <span>Steven Spielberg</span>
+          <span>George Lucas</span>
+          <span>David Flincher</span>
+          <span>Curtis Hanson</span>
+          <span>Ang Lee</span>
+          <span>Terrence Malick</span>
+          <span>Benh Zelich</span>
+          <span>Roberto Benigni</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button>Change Color</button>
     <div class="container">
   
 
@@ -137,7 +169,55 @@
               <div class="love1"></div>
               <div class="love2"></div>
 
-              <script defer>
+        <script defer>
+                //selectors
+const barsEl = document.querySelector(".bars");
+
+const buttonEl = document.querySelector("button");
+
+//utils
+const randColor = () => {
+  let red = Math.random() * 256;
+  let green = Math.random() * 256;
+  let blue = Math.random() * 256;
+  return `rgb(${red} , ${green} , ${blue})`;
+};
+
+const barData = [
+  { height: 390, rows: 4 },
+  { height: 300, rows: 5 },
+  { height: 350, rows: 3 },
+  { height: 204, rows: 4 },
+  { height: 200, rows: 6 },
+  { height: 150, rows: 2 },
+  { height: 150, rows: 3 },
+  { height: 180, rows: 2 },
+  { height: 380, rows: 5 },
+  { height: 205, rows: 2 }
+];
+
+const render = () => {
+  let barContent = "";
+  barData.forEach((bar) => {
+    let spanEl = "";
+
+    for (let i = bar.rows; i > 0; i--) {
+      spanEl += `<span style="background-color:${randColor()}"></span>`;
+    }
+
+    barContent += `<div style ="height: ${(bar.height / 400) * 100}%">
+         ${spanEl}
+         </div>`;
+  });
+
+  barsEl.innerHTML = barContent;
+};
+
+//triggers
+buttonEl.addEventListener("click", () => render());
+
+render();
+
 
                   const formEl = document.getElementById("search-form");
 
