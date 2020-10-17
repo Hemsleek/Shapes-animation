@@ -538,7 +538,7 @@ h2 {
   grid-template-rows: repeat(auto-fill, minmax(1fr));
   padding: 0 0.2rem;
 }
-button {
+button.change-color {
   display: block;
   margin: 0 auto;
   padding: 0.3rem;
@@ -550,4 +550,16 @@ button {
   background: #f5f5f5;
   border-radius: 5px;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+.copy-test{
+  margin:2rem auto;
+}
+#src{
+  background:red;
+  width:fit-content;
+  margin-bottom:1rem;
+}
+
+.button1{
+  cursor:pointer;
 }
