@@ -180,7 +180,8 @@
               
               <div class="wrapper">
                 <div class="inner"></div>
-                <div class="cicle">
+                <div class="text">100%</div>
+                <div class="circle">
                   <div class="bar left">
                     <div class="progress">
               
@@ -199,9 +200,13 @@
                   const barsEl = document.querySelector(".bars");
                   const buttonEl = document.querySelector(".change-color");
                   const buttonEl1 = document.querySelector(".button1");
+                  const textEl = document.querySelector(".text");
 
 
                   const formEl = document.getElementById("search-form");
+
+                  //initialization
+                  let counter = 0;
 
 
                   //utils
@@ -294,7 +299,13 @@
                       }).then((data) => data.title).catch(error => console.log({error}))
                   console.log(result)
                 
-
+                  setInterval(() => {
+                      if (counter == 100) clearInterval();
+                      else {
+                        counter++;
+                        textEl.textContent = counter + "%";
+                      }
+                    }, 80)
 
                  
             </script>
