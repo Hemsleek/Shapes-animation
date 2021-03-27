@@ -63,6 +63,7 @@ body{
 .lord-of-ring{
     margin-top:5vh;
     margin-left:3rem;
+    font-family: 'Train One', cursive;
 }
 
 .ring{
@@ -654,4 +655,9 @@ button.change-color {
   }
 }
 
+@media(max-width:600px){
+  .lord-of-ring{
+    font-family: 'Dancing Script', cursive;
+  }
+}
 
