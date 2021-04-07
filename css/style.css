@@ -3,7 +3,7 @@ html ,body{
     padding: 0;
 }
 :root{
-  --color-fill:black;
+  /* --color-fill:black; */
 }
 *{
     box-sizing: border-box;
@@ -26,10 +26,13 @@ body{
 }
 .svg-test svg{
   background:red;
+  fill:blue;
   
 }
+
 .svg-test svg use:hover{
-  --color-fill:green;
+  /* --color-fill:green; */
+  fill:green
 }
 
 
